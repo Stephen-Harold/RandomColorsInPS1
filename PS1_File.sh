@@ -13,10 +13,12 @@ function textDefault() {
 	local  _shellClr=$(tput setaf $(( $_rndClr + 2 )));
 # Home directory text with random colours for each character
 	local _home=$( tput setaf $(( $RANDOM % 254 + 1 )); printf "H"; \
-					tput setaf $(( $RANDOM % 254 + 1 )); printf "o"; \
-					tput setaf $(( $RANDOM % 254 + 1 )); printf "m"; \
-							tput setaf $(( $RANDOM % 254 + 1 )); printf "e"; \
-					tput sgr0; );
+		       tput setaf $(( $RANDOM % 254 + 1 )); printf "o"; \
+		       tput setaf $(( $RANDOM % 254 + 1 )); printf "m"; \
+		       tput setaf $(( $RANDOM % 254 + 1 )); printf "e"; \
+		       tput sgr0;
+	 	);
+
 # Current time in 24hr clock
 	local _textTime="${BlueOnBlue}${UL}|$(date +%H:%M)|${LU}${RESET}";
 
