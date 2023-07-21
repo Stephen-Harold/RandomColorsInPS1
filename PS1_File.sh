@@ -1,4 +1,4 @@
-```
+
 lastErrorValue=${1:-0}; # If Var $1 is not defined it's default will be 0.
 function textDefault() {
 # -= PROMPT: Preconfigured text snippets =-
@@ -33,7 +33,7 @@ function textDefault() {
 
 # The current shell notification and insert point
 	local _textShell=$( echo "%{${UL}${_shellClr}%}${SHELL//*\/}%{${LU}${RESET}${WHITE}%}:%{${RESET}%} " );
-```
+
 
 	printf "%s %s %s" "$([[ "$lastErrorValue" != 0 ]] && echo $_textError || echo $_textHost)" "$_textPath" "$_textShell";
 }
